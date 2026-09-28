@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmar Subhani | Performance Marketing Strategist</title>
+<meta name="description" content="Resume of Ahmar Subhani, Performance Marketing Strategist and Paid Media Leader.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8fafc;--card:#ffffff;--card2:#f0fdf4;--line:#e2e8f0;
+  --text:#0f172a;--body:#334155;--muted:#64748b;
+  --green:#16a34a;--teal:#0d9488;--sky:#0ea5e9;--purple:#7c3aed;
+  --grad:linear-gradient(120deg,var(--green),var(--teal));
+  --soft:rgba(22,163,74,.1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+
+/* Background orbs */
+.blob{position:fixed;border-radius:50%;filter:blur(100px);z-index:-1;animation:float 18s ease-in-out infinite}
+.b1{width:440px;height:440px;background:var(--green);opacity:.22;top:-140px;left:-120px}
+.b2{width:400px;height:400px;background:var(--sky);opacity:.2;bottom:-150px;right:-110px;animation-delay:-6s}
+.b3{width:300px;height:300px;background:var(--purple);opacity:.1;top:40%;left:58%;animation-delay:-12s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(60px,40px) scale(1.1)}66%{transform:translate(-40px,60px) scale(.95)}}
+
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+header{min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:80px 0 40px}
+.hello{color:var(--green);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
+.name{font-size:clamp(2.8rem,8vw,5.6rem);font-weight:700;background:linear-gradient(90deg,var(--green),var(--teal),var(--sky),var(--green));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{from{background-position:0% 50%}to{background-position:300% 50%}}
+.role{font-size:clamp(1.2rem,3vw,1.7rem);margin:14px 0 26px;color:var(--body);min-height:2.2em;font-weight:500}
+.cursor{display:inline-block;width:2px;height:1.1em;background:var(--green);margin-left:4px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.chip{display:flex;align-items:center;gap:8px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.8);backdrop-filter:blur(8px);font-size:.9rem;color:var(--body);transition:.25s;box-shadow:0 2px 10px -4px rgba(15,23,42,.08)}
+.chip:hover{color:var(--green);border-color:var(--green);transform:translateY(-2px)}
+.chip svg{width:16px;height:16px;stroke:var(--green)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 24px;border-radius:12px;font-weight:600;cursor:pointer;border:none;font-size:.95rem;transition:.25s;font-family:inherit}
+.btn.primary{background:var(--grad);color:#fff;box-shadow:0 8px 24px -8px rgba(22,163,74,.6)}
+.btn.primary:hover{transform:translateY(-3px);box-shadow:0 14px 32px -8px rgba(13,148,136,.6)}
+.btn.ghost{background:#fff;color:var(--text);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-3px)}
+.scroll{margin-top:60px;color:var(--muted);font-size:.8rem;display:flex;align-items:center;gap:10px}
+.mouse{width:22px;height:34px;border:2px solid var(--muted);border-radius:12px;position:relative}
+.mouse::after{content:"";position:absolute;left:50%;top:6px;width:3px;height:7px;background:var(--green);border-radius:2px;transform:translateX(-50%);animation:wheel 1.6s infinite}
+@keyframes wheel{0%{opacity:1;top:6px}100%{opacity:0;top:18px}}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:10px 0 22px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 20px;text-align:center;position:relative;overflow:hidden;box-shadow:0 4px 20px -10px rgba(15,23,42,.1);transition:.3s}
+.stat::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:linear-gradient(90deg,var(--green),var(--teal),var(--sky));transform:scaleX(0);transform-origin:left;transition:.4s}
+.stat:hover{transform:translateY(-4px)}
+.stat:hover::after{transform:scaleX(1)}
+.num{font-family:"Space Grotesk";font-size:2.4rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat p{color:var(--muted);font-size:.85rem;margin-top:4px}
+
+/* Platforms */
+.platforms{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:90px}
+.pf{display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:.95rem;box-shadow:0 4px 16px -10px rgba(15,23,42,.15);opacity:0;transform:scale(.7) translateY(20px);transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .5s,border-color .3s,box-shadow .3s}
+.platforms.show .pf{opacity:1;transform:none}
+.pf:hover{border-color:var(--c);box-shadow:0 8px 24px -8px var(--c);transform:translateY(-4px)!important}
+.pf .dot{width:10px;height:10px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c);animation:pulse 2s infinite}
+@keyframes pulse{50%{transform:scale(1.4);opacity:.6}}
+.pf small{color:var(--muted);font-weight:500;font-size:.78rem}
+
+/* Sections */
+section{margin-bottom:90px}
+.sec-title{display:flex;align-items:center;gap:14px;margin-bottom:32px}
+.sec-title h2{font-size:1.9rem}
+.sec-title span{flex:1;height:2px;background:linear-gradient(90deg,var(--green),rgba(14,165,233,.3),transparent);border-radius:2px}
+.sec-title .idx{font-family:"Space Grotesk";color:var(--teal);font-size:.95rem;flex:none;height:auto;background:none}
+.summary{font-size:1.1rem;color:var(--body);background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:16px;padding:28px 30px;box-shadow:0 4px 20px -10px rgba(15,23,42,.1)}
+.summary b{color:var(--green)}
+
+/* Timeline */
+.timeline{position:relative;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--green),var(--teal),var(--sky));transform-origin:top;transform:scaleY(0);transition:transform 1.6s ease}
+.timeline.show::before{transform:scaleY(1)}
+.job{position:relative;margin-bottom:26px}
+.job::before{content:"";position:absolute;left:-32px;top:26px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--green);box-shadow:0 0 0 5px rgba(22,163,74,.15)}
+.job:nth-child(even)::before{border-color:var(--teal);box-shadow:0 0 0 5px rgba(13,148,136,.15)}
+.jcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px;transition:.3s;box-shadow:0 4px 20px -12px rgba(15,23,42,.12)}
+.jcard:hover{border-color:rgba(22,163,74,.45);transform:translateX(6px);background:var(--card2)}
+.jhead{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+.jhead h3{font-size:1.2rem}
+.date{font-size:.8rem;color:var(--green);background:var(--soft);padding:4px 12px;border-radius:999px;height:fit-content;white-space:nowrap;font-weight:600}
+.company{color:var(--teal);font-weight:600;margin-bottom:12px}
+.jcard ul{list-style:none}
+.jcard li{position:relative;padding-left:20px;margin-bottom:7px;color:var(--body);font-size:.95rem}
+.jcard li::before{content:"▹";position:absolute;left:0;color:var(--green)}
+.clients{margin-top:12px;font-size:.88rem;color:var(--muted)}
+.clients b{color:var(--text)}
+
+/* Skills */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.scard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.3s;box-shadow:0 4px 20px -12px rgba(15,23,42,.12)}
+.scard:hover{transform:translateY(-5px);border-color:rgba(13,148,136,.45)}
+.scard h3{font-size:1.05rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--grad);color:#fff;font-size:1rem}
+.grid2 .scard:nth-child(2) .ico{background:linear-gradient(120deg,var(--teal),var(--sky))}
+.grid2 .scard:nth-child(3) .ico{background:linear-gradient(120deg,var(--sky),var(--purple))}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:.83rem;padding:7px 12px;border-radius:9px;background:#f1f5f9;border:1px solid var(--line);color:var(--body);transition:.2s}
+.tag:hover{border-color:var(--green);background:var(--card2);color:var(--green);transform:scale(1.05)}
+
+/* Bottom cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.list li{list-style:none;padding:9px 0;border-bottom:1px dashed var(--line);color:var(--body);font-size:.93rem}
+.list li:last-child{border:none}
+.list small{display:block;color:var(--muted)}
+.lang{margin-bottom:14px}
+.lang div{display:flex;justify-content:space-between;font-size:.93rem;margin-bottom:6px}
+.lang div span{color:var(--muted)}
+.bar{height:6px;background:#e2e8f0;border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--teal),var(--sky));border-radius:6px;transition:width 1.4s ease}
+
+footer{text-align:center;padding:40px 0 60px;color:var(--muted);font-size:.85rem}
+footer a{color:var(--green);font-weight:600}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.hero-in>*{opacity:0;animation:up .9s forwards}
+.hero-in>*:nth-child(1){animation-delay:.1s}.hero-in>*:nth-child(2){animation-delay:.25s}
+.hero-in>*:nth-child(3){animation-delay:.4s}.hero-in>*:nth-child(4){animation-delay:.55s}
+.hero-in>*:nth-child(5){animation-delay:.7s}.hero-in>*:nth-child(6){animation-delay:.9s}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--green),var(--teal),var(--sky));z-index:10}
+
+@media(max-width:800px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid2,.grid3{grid-template-columns:1fr}
+  header{min-height:auto;padding-top:70px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.hero-in>*,.pf{opacity:1;transform:none}
+}
+
+/* Print / Save as PDF */
+@media print{
+  body{background:#fff}
+  .blob,.btns,.scroll,#progress,footer{display:none!important}
+  header{min-height:auto;padding:0 0 16px}
+  .reveal,.hero-in>*,.pf{opacity:1!important;transform:none!important}
+  .stat,.jcard,.scard,.summary,.pf{box-shadow:none;break-inside:avoid}
+  section{margin-bottom:28px}
+  .platforms{margin-bottom:28px}
+  .timeline::before{transform:scaleY(1)}
+  .bar i{width:var(--w)!important}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+
+<div class="wrap">
+  <header>
+    <div class="hero-in">
+      <p class="hello">Hello, I'm</p>
+      <h1 class="name">Ahmar Subhani</h1>
+      <p class="role"><span id="typed"></span><span class="cursor"></span></p>
+      <div class="chips">
+        <a class="chip" href="tel:+923164363807"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>0316-4363807</a>
+        <a class="chip" href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmarsubhani1000@gmail.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>ahmarsubhani1000@gmail.com</a>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Lahore, Pakistan</span>
+        <a class="chip" href="https://www.linkedin.com/in/m-ahmar-subhani-aa7345246" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+      </div>
+      <div class="btns">
+        <button class="btn primary" onclick="window.print()">⬇ Download PDF</button>
+        <a class="btn ghost" href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmarsubhani1000@gmail.com" target="_blank" rel="noopener">Let's Talk →</a>
+      </div>
+      <div class="scroll"><div class="mouse"></div>Scroll to explore</div>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat reveal"><div class="num" data-to="3" data-suf="+">0</div><p>Years Experience</p></div>
+    <div class="stat reveal d1"><div class="num" data-to="5" data-pre="$" data-suf="M+">0</div><p>Monthly Ad Spend Managed</p></div>
+    <div class="stat reveal d2"><div class="num" data-to="20" data-suf="+">0</div><p>Industries Served</p></div>
+    <div class="stat reveal d3"><div class="num" data-to="6">0</div><p>Ad Platforms</p></div>
+  </div>
+
+  <div class="platforms reveal">
+    <div class="pf" style="--c:#4285F4;transition-delay:.05s"><span class="dot"></span>Google Ads <small>$1M+/mo</small></div>
+    <div class="pf" style="--c:#1877F2;transition-delay:.15s"><span class="dot"></span>Meta Ads <small>FB & IG</small></div>
+    <div class="pf" style="--c:#0A66C2;transition-delay:.25s"><span class="dot"></span>LinkedIn Ads <small>B2B</small></div>
+    <div class="pf" style="--c:#FE2C55;transition-delay:.35s"><span class="dot"></span>TikTok Ads</div>
+    <div class="pf" style="--c:#10A37F;transition-delay:.45s"><span class="dot"></span>ChatGPT Ads <small>AI</small></div>
+    <div class="pf" style="--c:#00B294;transition-delay:.55s"><span class="dot"></span>Bing Ads</div>
+  </div>
+
+  <section>
+    <div class="sec-title reveal"><span class="idx">01.</span><h2>Summary</h2><span></span></div>
+    <p class="summary reveal">Strategic performance marketing leader with <b>3+ years</b> of experience driving revenue growth and digital scale for global and regional brands. Expert in managing <b>$5M+ monthly ad spend</b> across Google, Meta, LinkedIn, TikTok, and Bing, designing full-funnel strategies that optimize ROI and customer acquisition. Actively expanding into emerging AI-driven and B2B/social channels, including LinkedIn Ads, TikTok Ads, and ChatGPT Ads, to diversify acquisition mix and stay ahead of platform shifts. Skilled in <b>GoHighLevel (GHL)</b> and <b>HubSpot</b> for automated CRM, lead nurturing, and pipeline optimization. Proven track record guiding high-impact campaigns across <b>20+ industries</b> and mentoring cross-functional teams toward continuous performance improvement.</p>
+  </section>
+
+  <section>
+    <div class="sec-title reveal"><span class="idx">02.</span><h2>Experience</h2><span></span></div>
+    <div class="timeline" id="timeline">
+      <div class="job reveal"><div class="jcard">
+        <div class="jhead"><h3>Performance Marketing Specialist – B2B Focus</h3><span class="date">Aug 2025 – Present</span></div>
+        <p class="company">Software Finder</p>
+        <ul>
+          <li>Managing $350K+ monthly ad budgets across Google Search, Performance Max, Display, Meta, Bing, LinkedIn, TikTok, and ChatGPT Ads campaigns.</li>
+          <li>Leading the expansion into LinkedIn Ads, TikTok Ads, and ChatGPT Ads to diversify the paid media mix and capture B2B demand across emerging and AI-driven channels.</li>
+          <li>Actively using HubSpot CRM for campaign tracking, lead nurturing, and performance reporting.</li>
+          <li>Driving data-backed strategies, from keyword planning to full-funnel optimization, ensuring campaigns deliver strong ROI.</li>
+          <li>Overseeing end-to-end campaign execution, with focus on scalability, efficiency, and measurable growth.</li>
+          <li>Collaborating with cross-functional teams to align paid media efforts with business objectives.</li>
+        </ul>
+      </div></div>
+
+      <div class="job reveal"><div class="jcard">
+        <div class="jhead"><h3>Google Ads Expert</h3><span class="date">Apr 2025 – Aug 2025</span></div>
+        <p class="company">Encoders Studio</p>
+        <ul>
+          <li>Managed $250K+ monthly ad budgets across Google Search and Performance Max.</li>
+          <li>Developed and executed data-driven strategies that increased ROI by over 30% within the first two months.</li>
+          <li>Collaborated closely with cross-functional teams to ensure paid media aligned with overall marketing goals.</li>
+          <li>Led continuous testing frameworks (ad copy, audiences, bidding) for performance improvement.</li>
+          <li>Built reports and insights that drove decision-making and campaign scalability.</li>
+        </ul>
+        <p class="clients"><b>Clients:</b> Gamesday Men Health · Healthsource Chiropractors · and many more</p>
+      </div></div>
+
+      <div class="job reveal"><div class="jcard">
+        <div class="jhead"><h3>Performance Marketing Executive</h3><span class="date">Nov 2022 – Apr 2025</span></div>
+        <p class="company">HexaClicks</p>
+        <ul>
+          <li>Lead strategist for $1M+ monthly ad budget across Google and Meta Ads, consistently surpassing performance benchmarks in lead generation, CPA, and ROAS.</li>
+          <li>Architected high-conversion funnels using GoHighLevel (GHL), implementing CRM automation, lead segmentation, and sales enablement workflows.</li>
+          <li>Directly mentored and developed junior media buyers, improving executional quality and decision-making across campaign builds.</li>
+          <li>Partnered with cross-functional teams to integrate tracking systems, automate reporting, and align paid media with client business goals.</li>
+          <li>Led performance reviews for 20+ industry verticals, translating raw data into strategic insights and quarterly growth roadmaps.</li>
+        </ul>
+        <p class="clients"><b>Clients:</b> National Auto Sales · Alloy Wheels Repair · Superior Air Management</p>
+      </div></div>
+
+      <div class="job reveal"><div class="jcard">
+        <div class="jhead"><h3>Sales Executive</h3><span class="date">Aug 2022 – Nov 2022</span></div>
+        <p class="company">Magnetar Solutions</p>
+        <ul>
+          <li>Surpassed sales quotas by designing tailored outreach strategies and optimizing client engagement flows.</li>
+          <li>Played a key role in revenue acceleration during a critical sales quarter.</li>
+        </ul>
+      </div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title reveal"><span class="idx">03.</span><h2>Core Competencies</h2><span></span></div>
+    <div class="grid2">
+      <div class="scard reveal"><h3><span class="ico">◎</span>Paid Media Strategy</h3><div class="tags">
+        <span class="tag">Google Ads – $1M+/mo</span><span class="tag">Search · Display · Shopping · Video</span><span class="tag">Meta Ads (FB & IG)</span><span class="tag">LinkedIn Ads · B2B & ABM</span><span class="tag">TikTok Ads · Spark Ads</span><span class="tag">ChatGPT Ads</span><span class="tag">Bing Ads</span>
+      </div></div>
+      <div class="scard reveal d1"><h3><span class="ico">▲</span>Data & Performance Analytics</h3><div class="tags">
+        <span class="tag">Google Analytics</span><span class="tag">Tag Manager</span><span class="tag">Looker Studio</span><span class="tag">Conversion Attribution</span><span class="tag">Advanced Tracking</span><span class="tag">ROAS / CPA Analysis</span><span class="tag">A/B Testing</span><span class="tag">Funnel Diagnostics</span><span class="tag">Cohort Segmentation</span>
+      </div></div>
+      <div class="scard reveal"><h3><span class="ico">⚙</span>Tech Stack & Automation</h3><div class="tags">
+        <span class="tag">GoHighLevel (GHL)</span><span class="tag">CRM · Funnels · Email/SMS</span><span class="tag">HubSpot CRM</span><span class="tag">Lead Nurturing</span><span class="tag">Google Ads Editor</span><span class="tag">Excel Dynamic Reporting</span><span class="tag">Funnel Automation</span><span class="tag">Lead Scoring</span>
+      </div></div>
+      <div class="scard reveal d1"><h3><span class="ico">★</span>Leadership & Client Impact</h3><div class="tags">
+        <span class="tag">Campaign Strategy</span><span class="tag">Stakeholder Communication</span><span class="tag">Executive Reporting</span><span class="tag">Team Mentorship</span><span class="tag">Training & Upskilling</span>
+      </div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid3">
+      <div class="scard reveal"><h3><span class="ico">🎓</span>Education</h3>
+        <ul class="list"><li>ICS – Computer Science<small>Punjab College · 2023</small></li></ul>
+      </div>
+      <div class="scard reveal d1"><h3><span class="ico">✓</span>Certifications</h3>
+        <ul class="list">
+          <li>Advanced Google Ads<small>Search, Display, Video, Shopping</small></li>
+          <li>Ultimate Google Ads Training</li>
+          <li>Instagram Marketing Strategy</li>
+          <li>PPC Strategy & Funnel Architecture</li>
+        </ul>
+      </div>
+      <div class="scard reveal d2"><h3><span class="ico">✦</span>Languages</h3>
+        <div class="lang"><div>English <span>Fluent</span></div><div class="bar"><i style="--w:88%"></i></div></div>
+        <div class="lang"><div>Urdu <span>Native</span></div><div class="bar"><i style="--w:100%"></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© <span id="yr"></span> Ahmar Subhani · <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmarsubhani1000@gmail.com" target="_blank" rel="noopener">Get in touch</a></footer>
+</div>
+
+<script>
+// Typing effect
+const roles=["Performance Marketing Strategist","Paid Media Leader","Google Ads Expert","B2B Growth Marketer"];
+let ri=0,ci=0,del=false;const el=document.getElementById("typed");
+function type(){
+  const w=roles[ri];
+  el.textContent=w.slice(0,ci);
+  if(!del&&ci<w.length){ci++;setTimeout(type,70)}
+  else if(!del){del=true;setTimeout(type,1600)}
+  else if(ci>0){ci--;setTimeout(type,35)}
+  else{del=false;ri=(ri+1)%roles.length;setTimeout(type,300)}
+}
+setTimeout(type,900);
+
+// Counters
+function count(n){
+  const to=+n.dataset.to,pre=n.dataset.pre||"",suf=n.dataset.suf||"";let s=null;
+  function step(t){if(!s)s=t;const p=Math.min((t-s)/1500,1),e=1-Math.pow(1-p,3);
+    n.textContent=pre+Math.round(to*e)+suf;if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+}
+
+// Reveal on scroll
+const io=new IntersectionObserver(es=>{es.forEach(e=>{
+  if(!e.isIntersecting)return;const t=e.target;t.classList.add("show");
+  const n=t.querySelector(".num");if(n&&!n.done){n.done=1;count(n)}
+  t.querySelectorAll(".bar i").forEach(b=>b.style.width=b.style.getPropertyValue("--w"));
+  io.unobserve(t);
+})},{threshold:.15});
+document.querySelectorAll(".reveal").forEach(r=>io.observe(r));
+const tl=document.getElementById("timeline");
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){tl.classList.add("show");o.disconnect()}},{threshold:.05}).observe(tl);
+
+// Scroll progress
+addEventListener("scroll",()=>{const h=document.documentElement;
+  document.getElementById("progress").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100+"%"});
+
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
